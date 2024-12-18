@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --main-font-family: "inter-Variable";
-    --accent-font-family: "PressStart2P-Regular";
-    --title-font-weight: 400;
+    --accent-font-family: "PressStart2P";
+    --title-font-weight: 700;
     --page-bg-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --page-bg-color: #fff;
     --text-color: #000;

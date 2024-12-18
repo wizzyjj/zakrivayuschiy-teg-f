@@ -30,6 +30,7 @@ header {
 .section_size {
   margin-inline: auto;
   inline-size: min(100vw, 700px);
+  
   border: 2px solid var(--border-color, #000);
   background-color: var(--page-bg-color, #fff);
 }
@@ -50,11 +51,12 @@ header {
   align-items: center;
   gap: 20px;
   font-family: var(--accent-font-family), fantasy;
-  margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+  block-size: clamp(368px, 56vh, 368px);
 }
 
 .header_title {
   font-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+  margin-block: clamp(7.5rem, 7.324rem);
 }
 
 .header_subtitle {
@@ -89,8 +91,9 @@ header {
   font-weight: 400;
   opacity: 0.5;
   mix-blend-mode: 22px;
-  inset-block-start: 22px;
-  inset-inline-end: 11px;
+  inset-block-start: 25px;
+  inset-inline-end: 19px;
+  text-shadow: 0 0 1px #ffffff;
 }
 
 @supports((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
@@ -140,6 +143,9 @@ header {
 .like-icon {
   block-size: 36px;
   inline-size: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .like-icon .heart {
@@ -209,7 +215,7 @@ header {
 
 .modal::backdrop {
   background-color: #000;
-  filter: opacity(0.6);
+  opacity: 0.75;
 }
 
 .modal_content {
@@ -254,7 +260,6 @@ header {
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--border-color);
-  transition: 0.3s ease;
 }
 
 .sparks {
@@ -270,7 +275,6 @@ header {
   fill: transparent;
   transition: 0.3s;
 }
-
 
 .filter-greyscale {
   filter: grayscale(70%);
