@@ -9,7 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -30,18 +29,8 @@ header {
 .section_size {
   margin-inline: auto;
   inline-size: min(100vw, 700px);
-  
   border: 2px solid var(--border-color, #000);
   background-color: var(--page-bg-color, #fff);
-}
-
-@media (width <= 375px) {
-  .section_size {
-    inline-size: 100%;
-  }
-  .button_save {
-    flex-direction: column;
-  }
 }
 
 .title_section {
@@ -51,11 +40,13 @@ header {
   align-items: center;
   gap: 20px;
   font-family: var(--accent-font-family), fantasy;
-  block-size: clamp(368px, 56vh, 368px);
+  padding-block: clamp(120px, 8.9vw, 128px);
+  border: 2px solid var(--border-color, #000);
+  background-color: var(--page-bg-color, #fff);
 }
 
 .header_title {
-  font-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-block: clamp(7.5rem, 7.324rem);
 }
 
@@ -268,32 +259,51 @@ header {
 
 .core {
   fill: transparent;
-  transition: 0.3s 0.03s;
+  transition: linear 0.3s 0.03s;
 }
 
 .main-body {
   fill: transparent;
-  transition: 0.3s;
+  transition: linear 0.3s;
 }
 
 .filter-greyscale {
   filter: grayscale(70%);
 }
+
 .filter-saturate {
   filter: saturate(250%);
 }
+
 .filter-multiple {
   filter: contrast(50%) hue-rotate(35deg) saturate(130%);
 }
+
 .filter-invert {
   filter: invert(100%);
 }
+
 .filter-sepia {
   filter: sepia(90%);
 }
+
 .filter-blur {
   filter: blur(2px);
 }
+
 .filter-hue-rotate {
   filter: hue-rotate(210deg);
+}
+
+@media (width <= 400px) {
+  .section_size {
+    inline-size: 100%;
+  }
+  .button_save {
+    flex-direction: column;
+  }
+  .button_icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 }
